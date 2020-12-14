@@ -1,0 +1,30 @@
+/* body {
+
+} */
+
+
+/* Used for styling divs */
+.centerStuff {
+    text-align: center;
+    margin: 30px;
+}
+
+
+/* Score Count Styling */
+.scoreStyling {
+    font-size: 100px;
+}
+
+
+/* Action Image Styling*/
+#actionImage {
+    border: red 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.setImageSize{
+    height: 255px;
+    width: 260px;
+}
+

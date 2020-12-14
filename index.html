@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+<!-- GAME TITLE AREA-->
+<div id="title" class="centerStuff">
+    <h1>Rock Paper Scissors</h1>
+</div>
+
+
+
+
+<!-- SCORE DISPLAY AREA -->
+<div id="scoreDisplay" class="centerStuff">
+    <p>
+        <span id="leftScore" class="scoreStyling"> 0 </span > 
+            
+        <span class="scoreStyling"> - </span> 
+        
+        <span id="rightScore" class="scoreStyling"> 0 </span>
+    </p>
+</div>
+
+<!-- IMAGE AREA FOR ACTION CHOSEN -->
+<div id="actionImage" class="centerStuff">
+    <img src="./images/rockL.png" alt="players choice" class="setImageSize">
+    <img src="./images/rockR.png" alt="players choice" class="setImageSize"> 
+</div>
+
+<!-- SETTINGS AREA  -->
+
+    <!-- MAX SCORE TO WIN CHANGE AREA -->
+    <div id="scoreChange" class="centerStuff">
+        <input type="text">
+        <input type="submit" value="Change Score">
+
+    </div>
+
+    <!-- AREA FOR SINGLE PLAYER OR MULTIPLAYER -->
+    <div id="gameMode" class="centerStuff">
+        <input type="submit" value="Singplayer">
+        <input type="submit" value="Multiplayer">   
+    </div>
+
+
+<!-- PLAYERS CHOICE OF ACTION -->
+<div id="actions" class="centerStuff">
+    <input type="submit" value="ROCK">
+    <input type="submit" value="PAPER">
+    <input type="submit" value="SCISSORS">
+</div>
+
+
+<script src="./js/script.js"></script>
+</body>
+</html>
