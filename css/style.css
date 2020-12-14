@@ -18,7 +18,6 @@
 
 /* Action Image Styling*/
 #actionImage {
-    border: red 1px solid;
     display: flex;
     justify-content: space-evenly;
 }
