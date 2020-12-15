@@ -5,7 +5,7 @@
 // 
 
 
-let scoreToWin = 3; 
+let scoreToWin = 1; 
 let leftScore = 0; 
 let rightScore = 0; 
 let leftChoice = "";
@@ -15,7 +15,21 @@ let rightChoice = "";
 // Check to see if any win game conditions are posssible 
 function checkMatchScore() {
     if(leftScore || rightScore === scoreToWin) {
+        // disables player2s action buttons after winner is displayed
+        document.getElementById("rockRBtn").disabled = true;
+        document.getElementById("paperRBtn").disabled = true;
+        document.getElementById("scissorRBtn").disabled = true;
+
+
+        // disables player1s action buttons after winner is displayed
+        document.getElementById("rockLBtn").disabled = true;
+        document.getElementById("paperLBtn").disabled = true;
+        document.getElementById("scissorLBtn").disabled = true;
         console.log("Game Over!");
+
+
+        // disables play button after winner is decided 
+        document.getElementById("play").disabled = true;
     }
 }
 
