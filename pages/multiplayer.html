@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+
+
+<!-- GAME TITLE AREA-->
+<div id="gameModeSelected" class="centerStuff">
+    <h1>Singleplayer</h1>
+</div>
+
+
+
+<!-- SCORE DISPLAY AREA -->
+<div id="scoreDisplay" class="centerStuff">
+    <p>
+        <span id="leftScoreDisplay" class="scoreStyling"> 0 </span > 
+            
+        <span class="scoreStyling"> - </span> 
+        
+        <span id="rightScoreDisplay" class="scoreStyling"> 0 </span>
+    </p>
+</div>
+
+
+
+<!-- IMAGE AREA FOR ACTION CHOSEN -->
+<div id="actionImage" class="centerStuff">
+    <img src="../images/noChoiceMadeYet.png" alt="players choice" class="setImageSize" id="leftImage">
+    <img src="../images/noChoiceMadeYet.png" alt="players choice" class="setImageSize" id="rightImage"> 
+</div>
+
+
+
+<!-- PLAYERS CHOICE OF ACTION -->
+<div id="actions" class="centerStuff">
+    <div id="leftActions">
+        <p>Player1</p>
+        <button id="rockLBtn">rock</button>
+        <button id="scissorLBtn">scissor</button>
+        <button id="paperLBtn">paper</button>
+    </div>
+</div>
+
+
+
+<!-- SETTINGS AREA  -->
+
+    <!-- MAX SCORE TO WIN CHANGE AREA -->
+    <div id="scoreChange" class="centerStuff">
+        <input type="text">
+        <input type="submit" value="Change Score" onclick="submitScoreChange">
+
+    </div>
+
+
+
+    <!-- AREA FOR SINGLE PLAYER OR MULTIPLAYER -->
+    <div id="gameMode" class="centerStuff">
+        <a href="../index.html">
+            <button>Singleplayer</button>
+        </a>
+    </div>
+
+
+    
+<!-- Javascript links -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
+
+
+
+</body>
+</html>
