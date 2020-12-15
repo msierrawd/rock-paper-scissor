@@ -11,8 +11,8 @@
 
 
 <!-- GAME TITLE AREA-->
-<div id="title" class="centerStuff">
-    <h1>Rock Paper Scissor</h1>
+<div id="gameModeSelected" class="centerStuff">
+    <h1>Multiplayer</h1>
 </div>
 
 
@@ -32,8 +32,31 @@
 
 <!-- IMAGE AREA FOR ACTION CHOSEN -->
 <div id="actionImage" class="centerStuff">
-    <img src="./images/rockL.png" alt="players choice" class="setImageSize" id="leftImage">
-    <img src="./images/rockR.png" alt="players choice" class="setImageSize" id="rightImage"> 
+    <img src="./images/noChoiceMadeYet.png" alt="players choice" class="setImageSize" id="leftImage">
+    <img src="./images/noChoiceMadeYet.png" alt="players choice" class="setImageSize" id="rightImage"> 
+</div>
+
+
+
+<!-- PLAYERS CHOICE OF ACTION -->
+<div id="actions" class="centerStuff">
+    <div id="leftActions">
+        <p>First Player</p>
+        <button id="rockLBtn">rock</button>
+        <button id="scissorLBtn">scissor</button>
+        <button id="paperLBtn">paper</button>
+    </div>
+   
+    <div id="checkResult">
+        <button id="play">play</button>
+    </div>
+
+    <div id="rightActions">
+        <p>Second Player</p>
+        <button id="rockRBtn">rock</button>
+        <button id="scissorRBtn">scissor</button>
+        <button id="paperRBtn">paper</button>
+    </div>
 </div>
 
 
@@ -47,6 +70,8 @@
 
     </div>
 
+
+
     <!-- AREA FOR SINGLE PLAYER OR MULTIPLAYER -->
     <div id="gameMode" class="centerStuff">
         <button>Singleplayer</button>
@@ -54,23 +79,7 @@
     </div>
 
 
-
-<!-- PLAYERS CHOICE OF ACTION -->
-<div id="actions" class="centerStuff">
-    <button id="rockLBtn">rock</button>
-    <button id="scissorLBtn">scissor</button>
-    <button id="paperLBtn">paper</button>
-   
-    <br>
-    <br>
-
-    <button id="rockRBtn">rock</button>
-    <button id="scissorRBtn">scissor</button>
-    <button id="paperRBtn">paper</button>
-</div>
-
-
-
+    
 <!-- Javascript links -->
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>

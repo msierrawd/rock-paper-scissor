@@ -1,6 +1,6 @@
-/* body {
-
-} */
+body {
+    background-color: aquamarine;
+}
 
 
 /* Used for styling divs */
@@ -15,6 +15,10 @@
     font-size: 100px;
 }
 
+#actions {
+    display: flex;
+    justify-content: space-around;
+}
 
 /* Action Image Styling*/
 #actionImage {
@@ -23,7 +27,7 @@
 }
 
 .setImageSize{
-    height: 255px;
-    width: 260px;
+    height: 300px;
+    width: 300px;
 }
 
