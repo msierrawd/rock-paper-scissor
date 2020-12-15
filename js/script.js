@@ -16,9 +16,9 @@ function gameRules () {
     if (leftChoice === rightChoice) {
         console.log("TIE!");
     }else if(leftChoice === "rock" && rightChoice === "paper") {
-        leftScore++
-    }else if (leftChoice === "rock" && rightChoice === "scissor") {
         rightScore++
+    }else if (leftChoice === "rock" && rightChoice === "scissor") {
+        leftScore++
     }else if (leftChoice === "paper" && rightChoice === "rock") {
         leftChoice++ 
     }else if (leftChoice === "paper" && rightChoice === "scissor"){
@@ -26,6 +26,6 @@ function gameRules () {
     }else if (leftChoice === "scissor" && rightChoice === "rock") {
         rightChoice++
     }else if (leftChoice === "scissor" && rightChoice === "paper") {
-        rightChoice++ 
+        leftChoice++ 
     }
 }
