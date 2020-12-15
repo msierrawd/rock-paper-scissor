@@ -4,7 +4,7 @@
 // 
 // 
 
-
+// declaring global variables
 let scoreToWin = 1; 
 let leftScore = 0; 
 let rightScore = 0; 
@@ -15,6 +15,10 @@ let rightChoice = "";
 // Check to see if any win game conditions are posssible 
 function checkMatchScore() {
     if(leftScore || rightScore === scoreToWin) {
+
+        makeRematchBtn();
+
+
         // disables player2s action buttons after winner is displayed
         document.getElementById("rockRBtn").disabled = true;
         document.getElementById("paperRBtn").disabled = true;
@@ -28,9 +32,28 @@ function checkMatchScore() {
         console.log("Game Over!");
 
 
-        // disables play button after winner is decided 
-        document.getElementById("play").disabled = true;
+
     }
+}
+
+
+
+// Deletes play button and make rematch button
+function makeRematchBtn(){
+    // gets rid of play button
+    let playBtn = document.getElementById("play");
+    playBtn.remove();
+
+    // makes rematch button and appends it to checkResult div
+    let rematchBtn = document.createElement("BUTTON");
+    rematchBtn.innerHTML = "rematch"
+    rematchBtn.setAttribute("id", "rematchBtn")
+    document.getElementById("checkResult").appendChild(rematchBtn);
+
+
+    document.getElementById("rematchBtn").addEventListener("click", function() {
+        location.reload();
+      });
 }
 
 
@@ -59,12 +82,6 @@ function gameRules () {
         leftScore+= 1;
         document.getElementById("leftScoreDisplay").innerHTML ++ ;
     }
-}
-
-
-
-function submitScoreChange(int) {
-    scoreToWin = int;
 }
 
 
