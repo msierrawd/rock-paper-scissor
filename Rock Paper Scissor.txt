@@ -1,5 +1,0 @@
-To do - 
-
-Find a color palette for website
-Make score change with animation
-Make submit button have animation
