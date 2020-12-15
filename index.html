@@ -20,11 +20,11 @@
 <!-- SCORE DISPLAY AREA -->
 <div id="scoreDisplay" class="centerStuff">
     <p>
-        <span id="leftScore" class="scoreStyling"> 0 </span > 
+        <span id="leftScoreDisplay" class="scoreStyling"> 0 </span > 
             
         <span class="scoreStyling"> - </span> 
         
-        <span id="rightScore" class="scoreStyling"> 0 </span>
+        <span id="rightScoreDisplay" class="scoreStyling"> 0 </span>
     </p>
 </div>
 
@@ -43,7 +43,7 @@
     <!-- MAX SCORE TO WIN CHANGE AREA -->
     <div id="scoreChange" class="centerStuff">
         <input type="text">
-        <input type="submit" value="Change Score">
+        <input type="submit" value="Change Score" onclick="submitScoreChange">
 
     </div>
 
@@ -57,9 +57,16 @@
 
 <!-- PLAYERS CHOICE OF ACTION -->
 <div id="actions" class="centerStuff">
-    <button id="rockBtn">rock</button>
-    <button id="scissorBtn">scissor</button>
-    <button id="paperBtn">paper</button>
+    <button id="rockLBtn">rock</button>
+    <button id="scissorLBtn">scissor</button>
+    <button id="paperLBtn">paper</button>
+   
+    <br>
+    <br>
+
+    <button id="rockRBtn">rock</button>
+    <button id="scissorRBtn">scissor</button>
+    <button id="paperRBtn">paper</button>
 </div>
 
 
