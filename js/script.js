@@ -1,4 +1,11 @@
-let scoreToWin = 1; 
+// 
+// 
+// SINGLEPLAYER JS CODE 
+// 
+// 
+
+
+let scoreToWin = 3; 
 let leftScore = 0; 
 let rightScore = 0; 
 let leftChoice = "";
@@ -15,25 +22,26 @@ function checkMatchScore() {
 
 
 // Checks to see if there are any winning or tie-ing situations
+// Add code that stops score addition if winscore is reached
 function gameRules () {
     if (leftChoice === rightChoice) {
         console.log("TIE!");
-    }else if(leftChoice === "rock" && rightChoice === "paper") {
+    }else if(leftChoice === "rock" && rightChoice === "paper" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         rightScore+= 1;
         document.getElementById("rightScoreDisplay").innerHTML ++ ;
-    }else if (leftChoice === "rock" && rightChoice === "scissor") {
+    }else if (leftChoice === "rock" && rightChoice === "scissor" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         leftScore+= 1;
         document.getElementById("leftScoreDisplay").innerHTML ++ ;
-    }else if (leftChoice === "paper" && rightChoice === "rock") {
+    }else if (leftChoice === "paper" && rightChoice === "rock" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         leftScore+= 1;
         document.getElementById("leftScoreDisplay").innerHTML ++ ;
-    }else if (leftChoice === "paper" && rightChoice === "scissor"){
+    }else if (leftChoice === "paper" && rightChoice === "scissor" && leftScore !== scoreToWin && rightScore !== scoreToWin){
         rightScore+= 1;
         document.getElementById("rightScoreDisplay").innerHTML ++ ;
-    }else if (leftChoice === "scissor" && rightChoice === "rock") {
+    }else if (leftChoice === "scissor" && rightChoice === "rock" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         rightScore+=1;
         document.getElementById("rightScoreDisplay").innerHTML ++ ;
-    }else if (leftChoice === "scissor" && rightChoice === "paper") {
+    }else if (leftChoice === "scissor" && rightChoice === "paper" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         leftScore+= 1;
         document.getElementById("leftScoreDisplay").innerHTML ++ ;
     }
@@ -85,7 +93,19 @@ document.getElementById("rockLBtn").addEventListener("click", function() {
   document.getElementById("play").addEventListener("click", function() {
     gameRules();
     checkMatchScore();
+    leftChoice = "";
+    rightChoice = ""
+    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png"
   });
 
 
 
+
+
+
+// 
+// 
+// MULTIPLAYER JS CODE 
+// 
+// 
