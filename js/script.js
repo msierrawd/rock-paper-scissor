@@ -4,11 +4,11 @@ let rightScore = 0;
 let leftChoice = " ";
 let rightChoice = " ";
 
-function checkCurrentScore() {
+function checkMatchScore() {
     if(leftScore === scoreToWin) {
         console.log("Left side won!");
     }else if (rightScore === scoreToWin) {
-        console.log("Righ side won!");
+        console.log("Right side won!");
     }
 }
 
