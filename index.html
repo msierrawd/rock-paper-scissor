@@ -16,6 +16,9 @@
 </div>
 
 
+<!-- WINNER ANNOUNCED -->
+<div id="winnerAnnounced" class="centerStuff"></div>
+
 
 <!-- SCORE DISPLAY AREA -->
 <div id="scoreDisplay" class="centerStuff">
@@ -52,7 +55,7 @@
     </div>
 
 
-    
+
     <div id="rightActions">
         <p>Player1</p>
         <button id="rockRBtn">rock</button>
@@ -67,8 +70,8 @@
 
     <!-- MAX SCORE TO WIN CHANGE AREA -->
     <div id="scoreChange" class="centerStuff">
-        <input type="text">
-        <input type="submit" value="Change Score" onclick="submitScoreChange">
+        <input type="text" id="newScoreLimit">
+        <input type="submit" value="Change Score" onclick="changeScoreLimit()">
 
     </div>
 
@@ -77,7 +80,7 @@
     <!-- AREA FOR SINGLE PLAYER OR MULTIPLAYER -->
     <div id="gameMode" class="centerStuff">
         <a href="./pages/multiplayer.html">
-            <button>Multiplayer</button>
+            <button>Singleplayer</button>
         </a>
     </div>
 
