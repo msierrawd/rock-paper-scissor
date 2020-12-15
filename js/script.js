@@ -53,7 +53,7 @@ function checkMatchScore() {
 
 function changeScoreLimit() {
     newScore = document.getElementById("newScoreLimit").value
-    scoreToWin = newScore
+    scoreToWin = parseInt(newScore);
 }
 
 
@@ -100,7 +100,7 @@ function changePlayer2ImageBasedOnString(){
 // Add code that stops score addition if winscore is reached
 function gameRules () {
     if (leftChoice === rightChoice) {
-        console.log("TIE!");
+        
     }else if(leftChoice === "rock" && rightChoice === "paper" && leftScore !== scoreToWin && rightScore !== scoreToWin) {
         rightScore+= 1;
         document.getElementById("rightScoreDisplay").innerHTML ++ ;
