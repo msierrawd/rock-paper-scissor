@@ -18,7 +18,7 @@ let rightChoice = "";
 // Check to see if any win game conditions are posssible 
 function checkMatchScore() {
     if(leftScore === scoreToWin){
-        document.getElementById("winnerAnnounced").innerHTML="Player1 Wins!"
+        document.getElementById("winnerAnnounced").innerHTML="Player 1 Wins!"
         makeRematchBtn();
 
 
@@ -33,7 +33,7 @@ function checkMatchScore() {
         document.getElementById("paperLBtn").disabled = true;
         document.getElementById("scissorLBtn").disabled = true;
     }else if(rightScore === scoreToWin){
-        document.getElementById("winnerAnnounced").innerHTML="Player2 Wins!"
+        document.getElementById("winnerAnnounced").innerHTML="Player 2 Wins!"
         makeRematchBtn();
         
 
