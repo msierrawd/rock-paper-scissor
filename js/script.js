@@ -22,35 +22,44 @@ function checkMatchScore() {
         makeRematchBtn();
 
 
+
+        // disables player1s action buttons after winner is displayed
+        document.getElementById("rockLBtn").disabled = true;
+        document.getElementById("paperLBtn").disabled = true;
+        document.getElementById("scissorLBtn").disabled = true;
+
+
+
         // disables player2s action buttons after winner is displayed
         document.getElementById("rockRBtn").disabled = true;
         document.getElementById("paperRBtn").disabled = true;
         document.getElementById("scissorRBtn").disabled = true;
 
 
-        // disables player1s action buttons after winner is displayed
-        document.getElementById("rockLBtn").disabled = true;
-        document.getElementById("paperLBtn").disabled = true;
-        document.getElementById("scissorLBtn").disabled = true;
+
     }else if(rightScore === scoreToWin){
         document.getElementById("winnerAnnounced").innerHTML="Player 2 Wins!"
         makeRematchBtn();
-        
 
-        // disables player2s action buttons after winner is displayed
-        document.getElementById("rockRBtn").disabled = true;
-        document.getElementById("paperRBtn").disabled = true;
-        document.getElementById("scissorRBtn").disabled = true;
 
 
         // disables player1s action buttons after winner is displayed
         document.getElementById("rockLBtn").disabled = true;
         document.getElementById("paperLBtn").disabled = true;
         document.getElementById("scissorLBtn").disabled = true;
+
+
+
+        // disables player2s action buttons after winner is displayed
+        document.getElementById("rockRBtn").disabled = true;
+        document.getElementById("paperRBtn").disabled = true;
+        document.getElementById("scissorRBtn").disabled = true;
     }
 }
 
 
+
+// Changes scoreToWin 
 function changeScoreLimit() {
     newScore = document.getElementById("newScoreLimit").value
     scoreToWin = parseInt(newScore);
@@ -76,6 +85,9 @@ function makeRematchBtn(){
       });
 }
 
+
+
+// Changes player1 image based on leftChoice string value
 function changePlayer1ImageBasedOnString(){
     if (leftChoice === "rock"){
         document.getElementById("leftImage").src="./images/rockL.png"
@@ -86,6 +98,9 @@ function changePlayer1ImageBasedOnString(){
     }
 }
 
+
+
+// Changes player2 image based on rightChoice string value
 function changePlayer2ImageBasedOnString(){
     if(rightChoice === "rock"){
         document.getElementById("rightImage").src="./images/rockR.png"
@@ -96,8 +111,9 @@ function changePlayer2ImageBasedOnString(){
     }
 }
 
-// Checks to see if there are any winning or tie-ing situations
-// Add code that stops score addition if winscore is reached
+
+
+// Checks to see if there are any winning or tie situations
 function gameRules () {
     if (leftChoice === rightChoice) {
         
@@ -126,18 +142,18 @@ function gameRules () {
 
 // When player choice buttons are clicked 
 // leftChoice changes string value to what they picked 
-// leftImage changes src to match image of string value
+// leftImage changes to question mark
 document.getElementById("rockLBtn").addEventListener("click", function() {
     leftChoice = "rock";
-    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png";
   });
   document.getElementById("scissorLBtn").addEventListener("click", function() {
     leftChoice = "scissor";
-    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png";
   });
   document.getElementById("paperLBtn").addEventListener("click", function() {
     leftChoice = "paper";
-    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("leftImage").src="./images/noChoiceMadeYet.png";
 
   });
 
@@ -145,28 +161,33 @@ document.getElementById("rockLBtn").addEventListener("click", function() {
 
 // When player choice buttons are clicked 
 // rightChoice changes string value to what they picked 
-// rightImage changes src to match image of string value
+// rightImage changes to question mark
   document.getElementById("rockRBtn").addEventListener("click", function() {
     rightChoice = "rock";
-    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png";
   });
   document.getElementById("scissorRBtn").addEventListener("click", function() {
     rightChoice = "scissor";
-    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png";
   });
   document.getElementById("paperRBtn").addEventListener("click", function() {
     rightChoice = "paper";
-    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png"
+    document.getElementById("rightImage").src="./images/noChoiceMadeYet.png";
   });
 
 
+
+//   play button reveals image of what action was chosen and 
+//   compares both leftChoice and rightChoice values and determines if there is a tie
+//   or a point score. It then sets both choice values to an empty string to get ready 
+//   for next action button click
   document.getElementById("play").addEventListener("click", function() {
     changePlayer1ImageBasedOnString();
     changePlayer2ImageBasedOnString();
     gameRules();
     checkMatchScore();
     leftChoice = "";
-    rightChoice = ""
+    rightChoice = "";
 
   });
 
